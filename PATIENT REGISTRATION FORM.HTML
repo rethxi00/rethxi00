@@ -1,20 +1,18 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Formicon-Flat Forms Pack</title>
+		<title>PATIENT REGISTRATION</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="icons/styles.css">
-		<link rel="stylesheet" href="css/bootstrap-custom.css">
-		<link rel="stylesheet" href="css/registration-form.css">
+		
 
-		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600' rel='stylesheet' type='text/css'>
+		<link href='PATIENT REGISTRATION FORM.CSS' rel='stylesheet' type='text/css'>
 		
 	</head>
 	<body>
 		<!-- Register Form -->
 		<div class="form-wrapper"> <!-- Form-wrapper only for positioning -->
 			<form action="#non" method="post" class="fcorn-register container">
-				<p class="register-info">Note: All fields are required.</p>
+				<p class="register-info">Note: All fields must be filled by the patient or patient's guardian.</p>
 				<div class="row">
 					<p class="col-md-6"><input type="text" placeholder="First Name" required></p>
 					<p class="col-md-6"><input type="text" placeholder="Last Name" required></p>
@@ -26,30 +24,99 @@
 					<span class="extern-type">Atleast 8 characters long.</span>
 				</p>
 				<p><input type="password" placeholder="Verify Password" required></p>
+				<p><input type="weight" placeholder="Enter your weight" required></p>
+
+				
 				<div class="row">
 					<p class="col-md-4"><input type="text" placeholder="Date (dd)" required></p>
 					<p class="col-md-4"><input type="text" placeholder="Month (mm)" required></p>
 					<p class="col-md-4"><input type="text" placeholder="Year (yyyy)" required></p>
           <p class="col-md-12"><input type="text" placeholder="Membership code"><span class="extern-type">Enter your membership code, if you do not have one, leave it blank.</span></p>
 				</div>
+
+
+
+				<p> PURPOSE:<select name="Illness" size="1">
+				<option>battle an illness
+					<option>cause an illness
+						<option>chronic illness
+							<option>depressive illness
+								<option>detect an illness
+									<option>diagnose illness
+										<option>experience illness
+											<option>fatal illness
+												<option>illness prevention
+													<option>illness progresses
+														<option>illness strikes
+															<option>incurable illness
+																<option>infectious illness
+																	<option>life-threatening illness
+																		<option>long illness
+																			<option>long-term illness
+																				<option>mild illness
+																					<option>minor illness
+																						<option>mysterious illness
+																							<option>mystery illness
+																								<option>painful illness
+																									<option>physical illness
+																										<option>prevent illness
+																											<option>preventable illness
+																												<option>prolonged illness
+																													<option>psychiatric illness
+																														<option>psychological illness
+																															<option>psychosomatic illness
+																																<option>rare illness
+																																	<option>respiratory illness
+																																		<option>serious illness
+																																			<option>severe illness
+																                         														<option>short illness
+																																					<option>sign of illness
+																																						<option>smoking-related illness
+																																							<option>stomach illness
+																																								<option>stress-related illness
+																																									<option>sudden illness
+																																										<option>suffer an illness
+																																											<option>suffer illness
+																																												<option>symptom of an illness
+																																													<option>treat an illness
+																																														<option>treatable illness
+																																															<option>treatment of an illness
+																																																<option>trigger an illness
+																																																	<option>viral illness
+																																																	
+                </option>
+
+					<span class="extern-type">We'll keep this private.</span>
+
+
 				<div class="row">
 					<p class="col-md-6 city-wrap">
 						<select>
-							<option value="0" selected disabled>City</option>
-							<option value="1">San José</option>
+							<p> CITY: <select name="CITY" size="1">
+							<option value="1">YAOUNDE</option>
+							<option value="2">DOUALA</option>
+							<option value="3">BAFOUSSAM</option>
+							<option value="4">MAROUA</option>
+							<option value="5">GAROUA</option>
+							<option value="6">BAMENDA</option>
+							<option value="7">BUEA</option>
 						</select>
 					</p>
 					<p class="col-md-6 country-wrap">
 						<!-- Add more country name -->
 						<select>
 							<option value="0" selected disabled>Country</option>
-							<option value="1">U.S. Only</option>
-							<option value="2">Outside U.S.</option>
+							<option value="1">CAMEROON</option>
+		
 						</select>
 					</p>
           <div> 
+			<BR>
+			<BR>
+			<BR>
             <p class="col-xs-12"><form action="upload.php" method="post" enctype="multipart/form-data">
-            Upload your personal photo:
+           <center>    
+			  Upload your personal photo:</center> 
               <input type="file" name="fileToUpload" id="fileToUpload">
               <input type="submit" value="Upload Image" name="submit" required>
            </p>
