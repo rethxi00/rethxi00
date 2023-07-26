@@ -1,42 +1,65 @@
 <html lang="en">
+	<?php
+    $db = mysqli_connect('First Name','Last Name','Phone Number','Email Address','password','weight','Date','Month','Year','Membership code','PURPOSE','CITY','Country');
+?>
+<html>
+    <body>
+          <?php
+                $query = "SELECT * FROM `mytable`;";
+                $result = mysqli_query($db, $query);
+                while($row = mysqli_fetch_assoc($result)) {
+                      // Display your datas on the page
+                }
+          ?>
 	<head>
 		<meta charset="utf-8">
 		<title>PATIENT REGISTRATION</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-
+		<script type="="text/javascript" src="PATIENT REGISTRATION FORM1.js"></script>
 		<link href='PATIENT REGISTRATION FORM.CSS' rel='stylesheet' type='text/css'>
 		
 	</head>
 	<body>
 		<!-- Register Form -->
+		<h1><center>PATIENT REGISTRATION FORM</center></h1>
 		<div class="form-wrapper"> <!-- Form-wrapper only for positioning -->
 			<form action="#non" method="post" class="fcorn-register container">
 				<p class="register-info">Note: All fields must be filled by the patient or patient's guardian.</p>
 				<div class="row">
-					<p class="col-md-6"><input type="text" placeholder="First Name" required></p>
-					<p class="col-md-6"><input type="text" placeholder="Last Name" required></p>
+					<p class="col-md-6"><input type="text" placeholder="First Name" required name="fname"></p>
+					<p class="col-md-6"><input type="text" placeholder="Last Name" required name="lname"></p>
 				</div>
-				<p><input type="email" placeholder="Email Address" required>
+				<tr></tr>
+				<td>Phone number:</td>
+				<td>
+					<select>
+						<option>+237</option><input type="text" name="phonenum">
+					</select>
+				</td>
+				<p><input type="email" placeholder="Email Address" required name="emailid">
 				   <span class="extern-type">We'll keep this private.</span>
 				</p>
-				<p><input type="password" placeholder="Password" required>
+				<p><input type="password" placeholder="Password" required name="psw">
 					<span class="extern-type">Atleast 8 characters long.</span>
 				</p>
 				<p><input type="password" placeholder="Verify Password" required></p>
-				<p><input type="weight" placeholder="Enter your weight" required></p>
+				<p><input type="weight" placeholder="Enter your weight" required name="weight"></p>
 
 				
 				<div class="row">
-					<p class="col-md-4"><input type="text" placeholder="Date (dd)" required></p>
-					<p class="col-md-4"><input type="text" placeholder="Month (mm)" required></p>
-					<p class="col-md-4"><input type="text" placeholder="Year (yyyy)" required></p>
-          <p class="col-md-12"><input type="text" placeholder="Membership code"><span class="extern-type">Enter your membership code, if you do not have one, leave it blank.</span></p>
+					<p class="col-md-4"><input type="text" placeholder="Date (dd)" required name="date"></p>
+					<p class="col-md-4"><input type="text" placeholder="Month (mm)" required name="month"></p>
+					<p class="col-md-4"><input type="text" placeholder="Year (yyyy)" required name="year"></p>
+          <p class="col-md-12"><input type="text" placeholder="Membership code"><span class="extern-type" name="mbsc">Enter your membership code, if you do not have one, leave it blank.</span></p>
 				</div>
 
+        <td>
+			<input type="radio" name="gender" value="m">Male
+			<input type="radio" name="gender" value="f">Female
+		</td>
 
-
-				<p> PURPOSE:<select name="Illness" size="1">
+				<p> PURPOSE:<select name="Illness" size="1" name="purpose">
 				<option>battle an illness
 					<option>cause an illness
 						<option>chronic illness
@@ -92,7 +115,7 @@
 				<div class="row">
 					<p class="col-md-6 city-wrap">
 						<select>
-							<p> CITY: <select name="CITY" size="1">
+							<p> CITY: <select name="CITY" size="1" name="city">
 							<option value="1">YAOUNDE</option>
 							<option value="2">DOUALA</option>
 							<option value="3">BAFOUSSAM</option>
@@ -105,7 +128,7 @@
 					<p class="col-md-6 country-wrap">
 						<!-- Add more country name -->
 						<select>
-							<option value="0" selected disabled>Country</option>
+							<option value="0" selected disabled name="country">Country</option>
 							<option value="1">CAMEROON</option>
 		
 						</select>
